@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  firestore:
+    image: google/cloud-sdk
+    command: ["gcloud", "beta", "emulators", "firestore", "start", "--host-port=0.0.0.0:9090", "--project=firestore-demo"]
+    ports:
+      - "9090:9090"
+    volumes:
+      - "firestore:/opt/data"
+
+volumes:
+  firestore:

@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    gcp:
+      firestore:
+        emulator:
+          enabled: true
+        host-port:
+          localhost:9090
+        project-id: firestore-demo-cfa60
+      project-id: firestore-demo-cfa60
+
+logging.level:
+  com.google.cloud.spring.core.DefaultCredentialsProvider: ERROR
